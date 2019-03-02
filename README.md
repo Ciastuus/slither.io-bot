@@ -1,50 +1,80 @@
-## NOTE: 
-Project "temporarily" discontinued as the original authors have lost interest in the game/project however continued development from fellow developers is not to be discouraged, if you wish so. An improved version of this bot (improved fork) is and can be found [here](https://github.com/j-c-m/Slither.io-bot) but both have been discontinued.
+Panel Gracza WWW dla MTA:SA
+===========
 
-One of the main reasons for discontinuation, is to embark on a new journey working on other areas in programming and using other languages as there is always something new to learn.
+Panel Gracza jest stworzony dla serwerów Multi Theft Auto. Został wykonany z myślą o serwerach, które mają zapotrzebowanie na tego typu rzeczy.
 
-**New active project will be linked soon and ANYBODY is welcome to collaborate with us! Await new updates!**
-# Slither.io bot
-Just for fun and AI. Written in Javascript, this is a project which the aim is to make a computer play against humans inside a human-driven game, which is in this case Slither.io. The goal is simple - try and make the snake live and get as long as possible.
+Autor
+========================================================================
 
-[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?maxAge=2592000)](https://gitter.im/ErmiyaEskandary/Slither.io-bot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+- Michał 'Ciastuuś' <kz-michal@wp.pl>
 
-# Table of Contents
-- [Installation instructions](https://github.com/ErmiyaEskandary/Slither.io-bot#installation-instructions)
-	- [Visual tutorial](https://github.com/ErmiyaEskandary/Slither.io-bot#visual-tutorial)
-	- [Text tutorial](https://github.com/ErmiyaEskandary/Slither.io-bot#text-tutorial)
-- [Hotkeys](https://github.com/ErmiyaEskandary/Slither.io-bot#hotkeys)
-- [Contributing](https://github.com/ErmiyaEskandary/Slither.io-bot#contributing)
-	- [Documentation](https://github.com/ErmiyaEskandary/Slither.io-bot#documentation)
-- [Authors](https://github.com/ErmiyaEskandary/Slither.io-bot#authors)
-- [License](https://github.com/ErmiyaEskandary/Slither.io-bot#license)
+Licencja
+========================================================================
 
-# Installation instructions
+Kod dystrybuowany jest na dwóch licencjach: GPLv2 oraz MIT.
 
-**NOTE: these instructions are for installing the bot at a production-ready, fully working and a fully tested state, which is recommended. For the latest bleeding edge code, which may not be fully tested, refer to the bot.user.js file in the current default develop branch as the instructions below refer the bot file in the master branch.**
+Polskie tłumaczenie licencji GPLv2: http://gnu.org.pl/text/licencja-gnu.html
 
-## Interactive tutorial
-http://slither.jlynx.net/
+Polskie tlumaczenie licencji MIT: http://blaszyk-jarosinski.pl/wp-content/uploads/2008/05/licencja-mit-tlumaczenie.pdf
 
-## Visual tutorial
-https://www.youtube.com/watch?v=d7mkAgQNuCA - Created by http://slither.jlynx.net/
+W repozytorium znajdują się również fragmenty kodu z boostrap, dystrybuowane na innej licencji, informacja o tym zawsze znajduje się przy danym zasobie.
 
-https://youtu.be/mlEKp-ZAi7w - Created by http://slithere.com/
+Powód wydania kodu
+========================================================================
 
-https://youtu.be/QF9JBMi-fLo?t=38s - Created by SeppeTutorials
+Wydałem ten kod z prostych powdów:
 
-https://youtu.be/IpsAazbVIcw - Created by TheFlyingPlatypus
+1. Oddać społeczności Multi Theft Auto i jego założyciełom serwerów coś nowego.
 
-## Text tutorial
-If you are on chrome, download the [TamperMonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) extension.
+3. Poprawić jakość powstających serwerów i pokazać, że jednak mogą mieć coś więcej, niż statystki in-game.
 
-On other browsers, use the [GreaseMonkey](https://addons.mozilla.org/en-GB/firefox/addon/greasemonkey/) extension.
+4. Pokazać, że jednak w takiej grze da się zrobić coś takiego co zostało przedstawione.
 
-Once installed, click on [this](https://github.com/ErmiyaEskandary/slither.io-bot/raw/master/bot.user.js), and choose **Install**.
+Zawartość repozytorium
+========================================================================
 
-Go to [slither.io](http://slither.io/), and enjoy !
+W repozytorium znajduje się:
+- Boostrap styl(css) & skrypt(js)
+- Zawartość php wraz z plikiem html(1)
+- Grafika
+- Czcionki
 
-# Hotkeys
+W repozytorium nie znajduje się:
+
+- Połączenie z bazą danych widoczną na stronie
+- Pliki wersji 2.0
+- Pliki wersji 3.0
+
+Gdzie wgrać panel gracza
+========================================================================
+
+Panel Gracza współpracuje jak dotychczas ze wszystkimi hostingami mając na myśli,
+
+- cba.pl
+- ugu.pl
+- proserwer.pl
+- nazwa.pl
+- oraz wiele więcej!
+
+Więc bez problemu można wgrać pliki, podpiąć pod bazę danych i cieszyć się działającym panelem.
+
+Jak uruchomić panel gracza
+========================================================================
+
+Aby, uruchomić poprwanie panel gracza:
+
+1. Skonfigurować bazę danych w pliku: bazadanych.php
+ 
+2. Wrzucić do głównego folderu wszystkie pliki na stronie www.
+ 
+3. Zedytować potrzebne pliki w których nazwy kolumn jak i tabeli nie są dostosowane pod każdy serwer.
+
+4. Po wszystkim wejść na stronę odświeżyć i cieszyć się grą.
+
+Informacje techniczne
+========================================================================
+
+### Baza danych - MySQL
 
 Key | Result
 ---|---
@@ -63,28 +93,19 @@ Z | Reset zoom
 ESC | Quick respawn
 Q | Quit to menu
 
+### Hasła graczy - MD5
 
-# Contributing
+Hasła graczy są zapisywane i odczytywane w hash md5. Głównie serwery zapisują swe hasła w Base64(teaEncode). Ja proponuję za to md5, gdyż wygodniej się zapisuje w systemie logowań dla php. Jeżeli będzie potrzeba można przenieść kodowanie na powyższe. Choć gdy nie będzie problemu można dla serwerów zmienić kodowanie na md5.
 
-Please refer to the [guidelines for contributing](https://github.com/ErmiyaEskandary/Slither.io-bot/blob/master/.github/CONTRIBUTING.md) for all the information you need.
+### Styl - Boostrap
 
-[Check the wiki for additional information](https://github.com/ErmiyaEskandary/Slither.io-bot/wiki)
+Styl jest utrzymywany na boostrap wersji 4.0 - wygodny układ jak i sam wygląd nie odstrasza potencjalnych ludzi, którzy mogą na niego spojrzeć w panelu gracza.
 
-NOTE : For existing collaborators, please refer to the [DEVELOPER.md file.](https://github.com/ErmiyaEskandary/Slither.io-bot/blob/master/DEVELOPER.md)
-## Documentation
+### Skrypt - Boostrap
 
-[![Documentation Status](https://readthedocs.org/projects/slitherio-bot/badge/?version=latest)](http://slitherio-bot.readthedocs.io/en/latest/?badge=latest)
+Skrypt jest i wyłącznie smaczkiem co do poniektórych rzeczy znajdujących się na stronie, dlatego też jest on też potrzebny. Nic nie zajmuje, a jest on jedynym skryptem, który i wyłącznie wspomaga styl boostrap'a.
 
-The [online documentation](http://slitherio-bot.readthedocs.io/en/latest/) is maintained in the `/docs` directory.
+### Grafika - Sygnatury
 
-# Authors
-**Ermiya Eskandary & Théophile Cailliau (ErmiyaEskandary & FliiFe)**
+W repozytorium znajduje się pięć grafik, a wzorów, które można Sobie dobrać. Oczywiście można dodać własny wzór. Przy zmianie wzoru stosujemy się kodem znajdującym się w ../sygnatura_gracz.php/ Linijka: 20 oraz Linijka: 42. Dostępne są wzory od 1-5.
 
-Started as a collaborative and fun project between me and FliiFe on 2016/04/20, with this :
-> Slither.io bot could be cool
-
-# License
-
-**Licensed under the Mozilla Public License, v. 2.0**
-
-Read LICENSE.md for more info.
