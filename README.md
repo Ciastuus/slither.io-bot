@@ -1,7 +1,7 @@
-Panel Gracza WWW dla MTA:SA
+Slither.io BOT
 ===========
 
-Panel Gracza jest stworzony dla serwerów Multi Theft Auto. Został wykonany z myślą o serwerach, które mają zapotrzebowanie na tego typu rzeczy.
+Bot jest stworzony dla gry slither.io. Działa i wyłącznie na Google Chrome z pomocą dodatku Tampermonkey.
 
 Autor
 ========================================================================
@@ -11,70 +11,37 @@ Autor
 Licencja
 ========================================================================
 
-Kod dystrybuowany jest na dwóch licencjach: GPLv2 oraz MIT.
+Kod dystrybuowany jest na licencji: MPL 2.0.
 
-Polskie tłumaczenie licencji GPLv2: http://gnu.org.pl/text/licencja-gnu.html
-
-Polskie tlumaczenie licencji MIT: http://blaszyk-jarosinski.pl/wp-content/uploads/2008/05/licencja-mit-tlumaczenie.pdf
-
-W repozytorium znajdują się również fragmenty kodu z boostrap, dystrybuowane na innej licencji, informacja o tym zawsze znajduje się przy danym zasobie.
-
-Powód wydania kodu
-========================================================================
-
-Wydałem ten kod z prostych powdów:
-
-1. Oddać społeczności Multi Theft Auto i jego założyciełom serwerów coś nowego.
-
-3. Poprawić jakość powstających serwerów i pokazać, że jednak mogą mieć coś więcej, niż statystki in-game.
-
-4. Pokazać, że jednak w takiej grze da się zrobić coś takiego co zostało przedstawione.
+Angielskie tłumaczenie licencji MPL 2.0: https://www.mozilla.org/en-US/MPL/2.0/
 
 Zawartość repozytorium
 ========================================================================
 
 W repozytorium znajduje się:
-- Boostrap styl(css) & skrypt(js)
-- Zawartość php wraz z plikiem html(1)
-- Grafika
-- Czcionki
 
-W repozytorium nie znajduje się:
+- Kod (javascript)
 
-- Połączenie z bazą danych widoczną na stronie
-- Pliki wersji 2.0
-- Pliki wersji 3.0
-
-Gdzie wgrać panel gracza
+Gdzie wgrać bota
 ========================================================================
 
-Panel Gracza współpracuje jak dotychczas ze wszystkimi hostingami mając na myśli,
+Bota wgrywamy poprzez dodatek Tampermonkey.
 
-- cba.pl
-- ugu.pl
-- proserwer.pl
-- nazwa.pl
-- oraz wiele więcej!
-
-Więc bez problemu można wgrać pliki, podpiąć pod bazę danych i cieszyć się działającym panelem.
-
-Jak uruchomić panel gracza
+Jak wgrać i uruchomić bota
 ========================================================================
 
-Aby, uruchomić poprwanie panel gracza:
+Aby, uruchomić poprawnie bota:
 
-1. Skonfigurować bazę danych w pliku: bazadanych.php
+1. Pobieramy https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
  
-2. Wrzucić do głównego folderu wszystkie pliki na stronie www.
+2. Wcisnąć w prawym górnym rogu logo Tampermonkey.
  
-3. Zedytować potrzebne pliki w których nazwy kolumn jak i tabeli nie są dostosowane pod każdy serwer.
+3. Wcisnąć Dodaj nowy skrypt...
 
-4. Po wszystkim wejść na stronę odświeżyć i cieszyć się grą.
+4. Wkleić kod zawarty w dyspozytorium pod nazwą Slither.io BoT.user.js
 
-Informacje techniczne
+Klawiszologia
 ========================================================================
-
-### Baza danych - MySQL
 
 Key | Result
 ---|---
@@ -92,20 +59,3 @@ Mouse wheel | Zoom in/out
 Z | Reset zoom
 ESC | Quick respawn
 Q | Quit to menu
-
-### Hasła graczy - MD5
-
-Hasła graczy są zapisywane i odczytywane w hash md5. Głównie serwery zapisują swe hasła w Base64(teaEncode). Ja proponuję za to md5, gdyż wygodniej się zapisuje w systemie logowań dla php. Jeżeli będzie potrzeba można przenieść kodowanie na powyższe. Choć gdy nie będzie problemu można dla serwerów zmienić kodowanie na md5.
-
-### Styl - Boostrap
-
-Styl jest utrzymywany na boostrap wersji 4.0 - wygodny układ jak i sam wygląd nie odstrasza potencjalnych ludzi, którzy mogą na niego spojrzeć w panelu gracza.
-
-### Skrypt - Boostrap
-
-Skrypt jest i wyłącznie smaczkiem co do poniektórych rzeczy znajdujących się na stronie, dlatego też jest on też potrzebny. Nic nie zajmuje, a jest on jedynym skryptem, który i wyłącznie wspomaga styl boostrap'a.
-
-### Grafika - Sygnatury
-
-W repozytorium znajduje się pięć grafik, a wzorów, które można Sobie dobrać. Oczywiście można dodać własny wzór. Przy zmianie wzoru stosujemy się kodem znajdującym się w ../sygnatura_gracz.php/ Linijka: 20 oraz Linijka: 42. Dostępne są wzory od 1-5.
-
