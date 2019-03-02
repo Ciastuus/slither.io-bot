@@ -43,19 +43,19 @@ Aby, uruchomić poprawnie bota:
 Klawiszologia
 ========================================================================
 
-Key | Result
+Klawisz | Nazwa opcji
 ---|---
-T / Right Click | Bot enabled/disabled
-**O** | **Mobile rendering - Try this if you experience lag**
-A/S | Radius multiplier
-D | Quick radius change - "approach" and "avoid" mode
+T | Włącz/Wyłącz bota
+O | Skin mobilny
+A/S | Mnożnik promienia
+D | Zmiana promienia
 I | Auto respawn
-G | Leaderboard overlay
-Y | Visual debugging
-U | Log debugging
-H | Overlays
-B | Background Change
-Mouse wheel | Zoom in/out
-Z | Reset zoom
-ESC | Quick respawn
-Q | Quit to menu
+G | Ukryj nicki na tablicy
+Y | Wizualny promień
+U | Log debugowania
+H | Wyłącz/Włącz panel
+B | Zmień tło
+SCROLL | Powiększ +/- 
+Z | Domyślne powiększenie
+ESC | Szybki respawn
+Q | Wyjście do menu
